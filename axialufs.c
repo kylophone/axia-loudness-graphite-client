@@ -19,7 +19,7 @@ int main(int argc, const char *argv[])
   double audioPayload[480]; // 480 audio samples per packet (max.) 
   ebur128_state* state = NULL;
   double shortTermLoudness;
-  uint16_t frameCounter = 0;
+  uint32_t frameCounter = 0;
   const char *multicastAddr = argv[1];
  
   /* set up socket */
@@ -65,7 +65,7 @@ int main(int argc, const char *argv[])
 
     ebur128_add_frames_double(state, audioPayload, (size_t) ((packetLength - 12) / 6));
     frameCounter += ((packetLength - 12) / 6);
-    if (frameCounter >= 4800) {
+    if (frameCounter >= 48000) {
       frameCounter = 0;
       ebur128_loudness_shortterm(state, &shortTermLoudness);
       //ebur128_loudness_momentary(state, &momentaryLoudness);
