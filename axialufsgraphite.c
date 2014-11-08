@@ -24,9 +24,9 @@ int main(int argc, const char *argv[])
   char graphiteOutputBuffer[100];
 
   if (argc != 4) {
-    printf("Argument Error!\n");
-    printf("Correct usage: axialufsgraphite <MC Livewire IP> <Graphite Server IP> <Graphite Metric Name>\n");
-    printf("Example: axialufsgraphite 239.192.2.169 127.0.0.1 Studio442PGM\n");
+    fprintf(stderr, "Argument Error!\n");
+    fprintf(stderr, "Correct usage: axialufsgraphite <MC Livewire IP> <Graphite Server IP> <Graphite Metric Name>\n");
+    fprintf(stderr, "Example: axialufsgraphite 239.192.2.169 127.0.0.1 Studio442PGM\n");
     return 1;
   }
 
