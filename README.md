@@ -4,6 +4,6 @@ An <a href = "https://tech.ebu.ch/docs/events/ibc11-ebutechnical/presentations/i
 
 Correct usage: `axialufsgraphite <MC Livewire IP> <Graphite Server IP> <Graphite Metric>`
 
-Example: `axialufsgraphite 239.192.2.169 127.0.0.1 Studio442PGM`
+Example: `axialufsgraphite 239.192.2.169 127.0.0.1 bbcSatDownlink1`
 
 <img src = "example.png"></img>
