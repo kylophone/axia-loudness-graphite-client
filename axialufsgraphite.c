@@ -21,7 +21,7 @@ int main(int argc, const char *argv[])
   ebur128_state* state = NULL;
   double shortTermLoudness;
   uint32_t frameCounter = 0;
-  char graphiteOutputBuffer[100];
+  char graphiteOutputBuffer[200];
 
   if (argc != 4) {
     fprintf(stderr, "Argument Error!\n");
