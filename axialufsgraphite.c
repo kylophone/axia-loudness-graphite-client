@@ -86,6 +86,7 @@ int main(int argc, const char *argv[])
     if (frameCounter >= 47999) {
       frameCounter = 0;
       ebur128_loudness_shortterm(state, &shortTermLoudness);
+      shortTermLoudness = shortTermLoudness <= -70. ? -70. : shortTermLoudness;
       sprintf(graphiteOutputBuffer, "%s %f %d\n", graphiteMetric, shortTermLoudness, (int) time(NULL)); 
       send(graphiteSocket, graphiteOutputBuffer, (strlen(graphiteOutputBuffer)), 0);
     } 
